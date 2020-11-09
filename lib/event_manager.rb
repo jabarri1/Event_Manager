@@ -1,6 +1,6 @@
 require 'csv'
 require 'google/apis/civicinfo_v2'
-
+puts 'EventManager Initialized.'
 
 def clean_zipcode(zipcode)
   zipcode.to_s.rjust(5,"0")[0..4]
@@ -23,7 +23,7 @@ def legislators_by_zipcode(zip)
   end
 end
 
-puts 'EventManager Initialized.'
+template_letter = File.read "form_letter.html"
 
 contents = CSV.open 'event_attendees.csv', headers: true, header_converters: :symbol
 
