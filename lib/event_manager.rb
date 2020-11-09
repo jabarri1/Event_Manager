@@ -1,5 +1,6 @@
 require 'csv'
 require 'google/apis/civicinfo_v2'
+
 puts 'EventManager Initialized.'
 
 def clean_zipcode(zipcode)
